@@ -50,3 +50,7 @@ target
 ####################
 **/selenium_standalone_zips/
 **/selenium_standalone_binaries/
+
+# Instructions for the challenge, which shouldn't be given away to future candidates.
+page.html
+README_MICAH.md
