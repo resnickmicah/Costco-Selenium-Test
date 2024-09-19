@@ -23,9 +23,9 @@ public enum DriverType implements DriverSetup {
     FIREFOX {
         public RemoteWebDriver getWebDriverObject(DesiredCapabilities capabilities) {
             FirefoxOptions options = new FirefoxOptions();
+            options.setBinary("/opt/homebrew/bin/firefox");
             options.merge(capabilities);
             options.setHeadless(HEADLESS);
-            options.setBinary(getFirefoxBinaryLocation());
 
             return new FirefoxDriver(options);
         }
