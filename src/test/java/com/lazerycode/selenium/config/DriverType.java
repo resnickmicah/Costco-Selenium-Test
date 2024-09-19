@@ -25,6 +25,7 @@ public enum DriverType implements DriverSetup {
             FirefoxOptions options = new FirefoxOptions();
             options.merge(capabilities);
             options.setHeadless(HEADLESS);
+            options.setBinary(getFirefoxBinaryLocation());
 
             return new FirefoxDriver(options);
         }
@@ -109,6 +110,16 @@ public enum DriverType implements DriverSetup {
         }
 
         return System.getProperty("braveBinaryLocation", defaultBraveLocation);
+    }
+
+    String getFirefoxBinaryLocation() {
+        String currentOperatingSystemName = System.getProperties().getProperty("os.name");
+        String defaultFirefoxLocation = "/opt/homebrew/bin/firefox";
+        if (currentOperatingSystemName.toLowerCase().contains("linux")) {
+            defaultFirefoxLocation = "/usr/bin/firefox";
+        }
+
+        return System.getProperty("firefoxBinaryLocation", defaultFirefoxLocation);
     }
 
     public final static boolean HEADLESS = Boolean.getBoolean("headless");
