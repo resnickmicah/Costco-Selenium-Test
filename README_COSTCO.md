@@ -4,4 +4,4 @@ I haven't tested this on anything besides my M1 Macbook with Firefox.
 
 I have the test set to run against localhost:8080.
 
-If you just want to see the test code and don't care for running some stranger's code on your local machine (smart!): [CostcoTestPage.java](src/test/java/com/lazerycode/selenium/tests/CostcoTestPage.java)
+If you just want to see the test code and don't care for running some stranger's code on your local machine (smart!): [TestCostcoPage.java](src/test/java/com/lazerycode/selenium/tests/TestCostcoPage.java)
