@@ -1,3 +1,7 @@
+### Hey, if you're here from Costco Travel... ###
+Check out my [README_COSTCO.md]
+
+
 Selenium-Maven-Template
 =======================
 
